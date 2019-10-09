@@ -1,0 +1,100 @@
+body{
+    font-family: 'Dancing Script', cursive;
+    background-color: black;
+}
+
+.container{
+    
+    margin:0% 5%;
+}
+header{
+    background-color: #5b7989;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5em;
+
+}
+header .cabecera{
+    
+    color: white;
+    text-shadow: 2px #02010a;
+}
+header .menu a{
+    color:white;
+}
+
+main #imagenCentral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #82c3a6;
+}
+main #imagenCentral img{
+    margin: 0.5em;
+    
+}
+
+
+main #imagenSecundaria{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:  #d5c75f;
+    
+}
+
+main #imagenSecundaria img{
+    margin: 0.5em;
+    max-height: 25em;
+    min-height: 1em;
+    border: 1px solid black;
+
+}
+
+#img_1:hover{
+    transform: rotate(10deg);
+    transition: 1s;
+    box-shadow: 2px 2px #82c3a6;
+}
+#img_2:hover{
+    transform: translate(20px, -5px);
+    transition: 1s;
+    box-shadow: 2px 2px #82c3a6;
+    
+}
+
+footer{
+    background-color: #C6d5c5;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 0.5em;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+}
+
+@media(max-width: 768px){
+
+    .menu{
+        display:none;
+    }
+
+    main #imagenSecundaria{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color:  #d5c75f;
+        
+    }
+
+    footer{
+        justify-content: start;
+        flex-direction: column;
+    }
+
+}
