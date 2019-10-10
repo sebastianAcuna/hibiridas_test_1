@@ -25,6 +25,12 @@ header .cabecera{
 header .menu a{
     color:white;
 }
+header .menu .seleccionado{
+    text-decoration:none;
+}
+
+
+/* MAIN SECTION */
 
 main #imagenCentral{
     display: flex;
@@ -34,6 +40,7 @@ main #imagenCentral{
 }
 main #imagenCentral img{
     margin: 0.5em;
+    box-shadow: 2px 2px #02010a;
     
 }
 
@@ -46,12 +53,21 @@ main #imagenSecundaria{
     
 }
 
-main #imagenSecundaria img{
-    margin: 0.5em;
-    max-height: 25em;
-    min-height: 1em;
-    border: 1px solid black;
+main #imagenSecundario a{
+    padding:0.5em;
+}
 
+/* img{
+    width: 95%;
+    height: auto;
+} */
+
+main #imagenSecundaria a img{
+    margin: 0.5em;
+    
+    width: 97%;
+    border: 1px solid black;
+    box-shadow: 2px 2px #02010a;
 }
 
 #img_1:hover{
@@ -66,6 +82,37 @@ main #imagenSecundaria img{
     
 }
 
+
+
+#galeria{
+    display:flex;
+    flex-direction: column;
+    background-color:  #d5c75f;
+}
+#galeria .filas{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#galeria .filas img{
+    margin:0.5em;
+    width:25%;
+    height: auto;
+    
+}
+
+#img1{
+    filter: blur(10px);
+}
+#img2, #img4, #img6{
+    filter:grayscale(100%);
+}
+#img3{
+    filter:sepia(90%);
+}
+/* MAIN SECTION */
+
 footer{
     background-color: #C6d5c5;
     border-bottom-right-radius: 10px;
@@ -77,19 +124,41 @@ footer{
 
 }
 
-@media(max-width: 768px){
+#redes_sociales a{
+    text-decoration: none;
+    color:black;
+}
 
-    .menu{
-        display:none;
+@media(max-width: 900px){
+
+    header{
+        flex-direction: column;
+    }
+    header h2{
+        text-align: center;
+    }
+    header .menu{
+        margin-bottom: 0.5em;
     }
 
     main #imagenSecundaria{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         background-color:  #d5c75f;
         
+    }
+
+    #galeria .filas{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #galeria .filas img{
+        width: 95%; 
     }
 
     footer{
